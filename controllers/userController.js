@@ -7,9 +7,6 @@ const jwt = require('jsonwebtoken');
 const FileService = require('../services/fileService');
 
 class AuthController {
-    async loginUser(req, res) {
-
-    }
     async checkUser(req, res) {
         const ipAddress = req.ip.split(':').pop();
         const userId = uuid.v4();

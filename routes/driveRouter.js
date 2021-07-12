@@ -13,7 +13,6 @@ router.get('/file/download', authMiddleware, fileController.downloadFile);
 router.get(['/file', '/file/:id'], authMiddleware, fileController.getFiles);
 
 // PUT
-// router.put('/folder/move', authMiddleware, fileController.updateFolderPath);
 router.put('/file/move', authMiddleware, fileController.updateFilePath);
 router.put('/file/name', authMiddleware, fileController.renameFile);
 
