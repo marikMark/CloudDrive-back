@@ -6,6 +6,7 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload');
 const sequelize = require('./db');
 const router = require('./routes/index');
+const path = require('path');
 
 app.use(cors());
 app.use(express.json());
