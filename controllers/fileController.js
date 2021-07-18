@@ -2,6 +2,7 @@ const fileService = require('../services/fileService');
 const { User } = require('../models/userModel');
 const { File } = require('../models/fileModel');
 const uuid = require('uuid');
+const path = require('path');
 
 const recursive = async (file) => {
     const findFiles = await File.findAll({
