@@ -205,7 +205,7 @@ class FileController {
     async downloadFile(req, res) {
         const {_id} = req.query;
         const {userId} = req.user;
-        const filePath = `${path.resolve(__dirname, 'static')}/${userId}/${_id}`;
+        const filePath = `/app/static/${userId}/${_id}`;
         const findFile = await File.findOne({
             where: {
                 _id,
