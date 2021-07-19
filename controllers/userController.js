@@ -8,7 +8,7 @@ const FileService = require('../services/fileService');
 
 class AuthController {
     async checkUser(req, res) {
-        const ipAddress = req.ip.split(':').pop();
+        const ipAddress = '127.0.0.1';
         const userId = uuid.v4();
 
         const candidate = await User.findOne({where: {ipAddress}});
