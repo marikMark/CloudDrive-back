@@ -9,7 +9,7 @@ router.use('/auth', authRouter);
 router.use('/drive', driveRouter);
 router.use('/', async (req, res) => {
     const {userId, _id, ext} = req.query;
-    const filePath = `/app/static/${userId}/${_id}`;
+    const filePath = `static/${userId}/${_id}`;
     const newFilePath = `${filePath}.${ext}`;
     fs.rename(filePath, newFilePath, () => {});
     return res.sendFile(newFilePath, () => {
