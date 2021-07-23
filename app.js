@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
 app.use('/api', router);
-app.use('/', router);
+// app.use('/', router);
 
 (async () => {
     try {
